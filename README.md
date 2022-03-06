@@ -1,9 +1,9 @@
 # ProjetVisualDon
 Projet VisualDon - Tendances Spotify
 
-[Source] : (https://www.kaggle.com/dhruvildave/spotify-charts/activity)
+[Source - 1](https://www.kaggle.com/dhruvildave/spotify-charts/activity)
 
-[Source] : (https://www.kaggle.com/ivannatarov/spotify-daily-top-200-songs-with-genres-20172021/activity)
+[Source - 2](https://www.kaggle.com/ivannatarov/spotify-daily-top-200-songs-with-genres-20172021/activity)
 
 ## Contexte:
 Nous avons trouvé nos différentes données sur la plateforme [Kaggle](www.kaggle.com). Le premier jeu de données, créé par [Dhruvil Dave],(https://www.kaggle.com/dhruvildave/spotify-charts/activity) recense des données concernant les “TOP 200” et “Viral50” charts depuis 2017. Puis dans un deuxième temps, nous avons trouvé des données sur les daily top 200, créé par [Ivan Natarov](https://www.kaggle.com/ivannatarov/spotify-daily-top-200-songs-with-genres-20172021/activity), qui regroupent les chansons s’y trouvant avec leur genre entre 2017 et 2021. Ces deux groupes de données s’inscrivent dans le contexte de l’application spotify de ces dernières années et ont été reprises de nombreuses fois par d'autres utilisateurs (également appelés contributeurs) utilisant la plateforme Kaggle.
