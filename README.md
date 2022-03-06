@@ -68,7 +68,8 @@ Nous avons également trouvé sur [github](https://github.com/willfurtado/Visual
 * [Spotify Charts 🎹 - Exploratory Data Analysis](https://www.kaggle.com/dhruvildave/spotify-charts-exploratory-data-analysis) 
 | Importer et "tidying" les données pour analyser les différents types d'écoute de musique, les statistiques des artistes, etc.
 
-* [Spotify daily top 200 songs with genres 2017-2021] (https://www.kaggle.com/ivannatarov/spotify-daily-top-200-songs-with-genres-20172021/code)| Ivan Natarov 
+* [Spotify daily top 200 songs with genres 2017-2021](https://www.kaggle.com/ivannatarov/spotify-daily-top-200-songs-with-genres-20172021/code)
+| Ivan Natarov 
 
 * [Spotify: EDA in R](https://www.kaggle.com/marwinsolomon/spotify-eda-in-r)
 | Analyser les données en les organisant en utilisant EDA.
