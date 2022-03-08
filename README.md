@@ -9,6 +9,7 @@ Projet VisualDon - Tendances Spotify
 Nous avons trouvé nos différentes données sur la plateforme [Kaggle](www.kaggle.com). Le premier jeu de données, créé par [Dhruvil Dave],(https://www.kaggle.com/dhruvildave/spotify-charts/activity) recense des données concernant les “TOP 200” et “Viral50” charts depuis 2017. Puis dans un deuxième temps, nous avons trouvé des données sur les daily top 200, créé par [Ivan Natarov](https://www.kaggle.com/ivannatarov/spotify-daily-top-200-songs-with-genres-20172021/activity), qui regroupent les chansons s’y trouvant avec leur genre entre 2017 et 2021. Ces deux groupes de données s’inscrivent dans le contexte de l’application spotify de ces dernières années et ont été reprises de nombreuses fois par d'autres utilisateurs (également appelés contributeurs) utilisant la plateforme Kaggle.
 
 ---
+
 ## Description :
 Le premier jeu de données est présenté sous forme de fichiers .CSV. L’information est organisée par catégories (ou plus précisément par 9 colonnes). Chaque catégorie comporte différents types de données comme texte, nombre, date, pourcentage et pays. Les colonnes,  comportant un titre unique, sont réparties comme tel:
 
@@ -22,7 +23,7 @@ Le premier jeu de données est présenté sous forme de fichiers .CSV. L’infor
 * Tendence → (category)
 * Streams → (int)
 
-L’url des chansons, sert de référence, car elle n'ajoute rien à l'information.
+L’url des chansons sert de référence, car elle n'ajoute rien à l'information.
 
 Pour le deuxième jeu, il est également sous forme de fichier .csv. Cependant, pour celui-ci, la mise en forme est un peu différente que le précédent, car toutes les données se trouvent dans des colonnes séparées entres elles par des #.
 
@@ -36,6 +37,7 @@ On y retrouve les colonnes suivantes :
 * Genre
 
 ---
+
 ## But :
 La musique faisant grande partie du quotidien de chacun, il nous semblait intéressant d'approfondir cette thématique. Nous avons donc pensé qu’analyser les tendances musiques de l’application Spotify pourrait nous apprendre d'avantages sur les musiques ainsi que les genres les plus écoutés.
 
@@ -45,13 +47,14 @@ Finalement, il serait intéressant d’analyser ces tendances pour comparer les 
 Nous nous sommes donc dirigés dans cette direction afin de tenter de démontrer si les résultats correspondent à ces questionnements. Nous avons utilisé les données trouvées pour mettre en images ces tendances.
 
 ---
+
 ## Références :
-Dans un premier temps, nous avons regardé sur Internet s’il existait déjà des visualisations de données sur spotify, et nous avons trouvé quelques recherches.
+Dans un premier temps, nous avons regardé sur Internet s’il existait déjà des visualisations de données sur Spotify, et nous avons trouvé quelques recherches.
 
 La première a été faite par[Anne Bode](https://towardsdatascience.com/visualizing-spotify-data-with-python-tableau-687f2f528cdd), qui a utilisé une API de Spotify et le logiciel tableau pour analyser et afficher les données de Spotify, et plus précisément les top artistes et chansons.
 Dans la même direction, une analyse du même type a également été faite par [Rohit Kumar Thakur](https://medium.com/@ninza7?source=post_page-----4af81c5531a7-----------------------------------) en 2021. Les deux analyses ont été faites à l’aide du langage de programmation Python.
 
-Nous avons également trouvé sur [github](https://github.com/willfurtado/Visualizing-Spotify-Data),une personne qui a analysé son propre spotify sur une période d’une année afin d’analyser les patterns qui sont récurrents. Finalement, également sur [gitHub](https://github.com/Julien-Verdun/SpotifyDataVisualizationProject), une personne qui a utilisé les données Spotify pour analyser les habitudes d’écoute de musique par jour et pendant la période du covid.
+Nous avons également trouvé sur [github](https://github.com/willfurtado/Visualizing-Spotify-Data),une personne qui a analysé son propre Spotify sur une période d’une année afin d’analyser les patterns qui sont récurrents. Finalement, également sur [gitHub](https://github.com/Julien-Verdun/SpotifyDataVisualizationProject), une personne qui a utilisé les données Spotify pour analyser les habitudes d’écoute de musique par jour et pendant la période du covid.
 
 ### Dataset
 
