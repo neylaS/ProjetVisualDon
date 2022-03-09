@@ -29,12 +29,12 @@ Pour le deuxième jeu, il est également sous forme de fichier .csv. Cependant, 
 
 On y retrouve les colonnes suivantes :
 
-* Position 
-* Titre de la chanson
-* Artiste
-* Streams
-* Date
-* Genre
+* Position → (int)
+* Titre de la chanson → (string)
+* Artiste → (string)
+* Streams → (int)
+* Date  → (date)
+* Genre → (string)
 
 ---
 
