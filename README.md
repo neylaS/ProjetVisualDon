@@ -8,8 +8,6 @@ Projet VisualDon - Tendances Spotify
 ## Contexte :
 Nous avons trouvé nos différentes données sur la plateforme [Kaggle](www.kaggle.com). Le premier jeu de données, créé par [Dhruvil Dave],(https://www.kaggle.com/dhruvildave/spotify-charts/activity) recense des données concernant les “TOP 200” et “Viral50” charts depuis 2017. Puis dans un deuxième temps, nous avons trouvé des données sur les daily top 200, créé par [Ivan Natarov](https://www.kaggle.com/ivannatarov/spotify-daily-top-200-songs-with-genres-20172021/activity), qui regroupent les chansons s’y trouvant avec leur genre entre 2017 et 2021. Ces deux groupes de données s’inscrivent dans le contexte de l’application spotify de ces dernières années et ont été reprises de nombreuses fois par d'autres utilisateurs (également appelés contributeurs) utilisant la plateforme Kaggle.
 
----
-
 ## Description :
 Le premier jeu de données est présenté sous forme de fichiers .CSV. L’information est organisée par catégories (ou plus précisément par 9 colonnes). Chaque catégorie comporte différents types de données comme texte, nombre, date, pourcentage et pays. Les colonnes,  comportant un titre unique, sont réparties comme tel:
 
@@ -36,8 +34,6 @@ On y retrouve les colonnes suivantes :
 * Date  → (date)
 * Genre → (string)
 
----
-
 ## But :
 La musique faisant grande partie du quotidien de chacun, il nous semblait intéressant d'approfondir cette thématique. Nous avons donc pensé qu’analyser les tendances musiques de l’application Spotify pourrait nous apprendre d'avantages sur les musiques ainsi que les genres les plus écoutés.
 
@@ -45,8 +41,6 @@ En effet, l’application Spotify offre l’option de voir des suggestions de mu
 
 Finalement, il serait intéressant d’analyser ces tendances pour comparer les résultats avec nos habitudes d'écoute. En effet, est-ce que les résultats obtenus reflètent notre réalité, est-ce que l’on se sent concerné par ces tendances, et enfin, peut-on retrouver des similitudes avec les habitudes d’écoute de nos proches ?
 Nous nous sommes donc dirigés dans cette direction afin de tenter de démontrer si les résultats correspondent à ces questionnements. Nous avons utilisé les données trouvées pour mettre en images ces tendances.
-
----
 
 ## Références :
 Dans un premier temps, nous avons regardé sur Internet s’il existait déjà des visualisations de données sur Spotify, et nous avons trouvé quelques recherches.
@@ -84,11 +78,11 @@ Cette liste n’est pas exhaustive. En effet, lorsqu’on regarde les activités
 Le premier recense plus de 20’000 vues et près de 2’500 téléchargements. Le deuxième moins connu, a été visionné plus de 7’000 fois et a été téléchargé près de 1’000 fois. Ces nombres montrent bien l’énorme portée de ces données.
 
 
+---
 
 
-
-
-<img width="2918" alt="wireframe" src="https://user-images.githubusercontent.com/92160986/158221221-1fd5ebcb-3e57-4575-90a7-231302f9f4d3.png">
+## Wireframe
+<img width="2918" alt="Site Wireframe" src="https://user-images.githubusercontent.com/92160986/158221221-1fd5ebcb-3e57-4575-90a7-231302f9f4d3.png">
 
 
 
