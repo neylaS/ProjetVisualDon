@@ -1,20 +1,28 @@
 import * as d3 from 'd3';
 
+//const carte = '../datasets/projet_dataviz.geojson'
 
-//import file1 from "../datasets/chartsSwissPlus2021.csv"
-//import file2 from "../datasets/data.csv"
+const margin = { top: 5, right: 5, bottom: 5, left: 5 },
+  width = document.querySelector("body").clientWidth,
+  height = 500;
 
-// console.log(file2)
+const svg = d3.select("#suisse").attr("viewBox", [0, 0, width, height]);
 
+let projection = d3.geoMercator()
+    .fitSize([width, height], data)
+    .scale(3000)
 
-// const artist = file2.map((d, i) => {
-// 				return d.Artist;
-// 			    	});
-// console.log(artist)
+let path = d3.geoPath()
+    .projection(projection)
 
-const width = 550, height = 550;
-const path = d3.geoPath();
-const projection = d3.geoConicConformal()
-    .center([2.454071, 46.279229])
-    .scale(2600)
-    .translate([width / 2, height / 2]);
+d3.json("../datasets/projet_dataviz.geojson")
+    .then((data) => {
+        console.log(data)
+    });
+
+svg.selectAll("path")
+    .data(data.features)
+    .join(enter => enter.append('path')
+        .attr("d", path)
+        .attr("fill", "none")
+        .attr("stroke-width", 1))
