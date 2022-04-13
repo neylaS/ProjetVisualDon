@@ -1,28 +1,30 @@
 import * as d3 from 'd3';
 
-//const carte = '../datasets/projet_dataviz.geojson'
+import data from '../data/projet_dataviz.geojson'
 
-const margin = { top: 5, right: 5, bottom: 5, left: 5 },
-  width = document.querySelector("body").clientWidth,
-  height = 500;
+const margin = {top : 50, right: 40, bottom: 50, left: 40},
+    width = window.innerWidth - margin.left - margin.right,
+    height = window.innerHeight - margin.top - margin.bottom;
 
-const svg = d3.select("#suisse").attr("viewBox", [0, 0, width, height]);
+const svg = d3.select("#vizArea")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    // translate this svg element to leave some margin.
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 
 let projection = d3.geoMercator()
-    .fitSize([width, height], data)
-    .scale(3000)
+    .fitSize([width,height], data)
+
 
 let path = d3.geoPath()
     .projection(projection)
-
-d3.json("../datasets/projet_dataviz.geojson")
-    .then((data) => {
-        console.log(data)
-    });
 
 svg.selectAll("path")
     .data(data.features)
     .join(enter => enter.append('path')
         .attr("d", path)
-        .attr("fill", "none")
-        .attr("stroke-width", 1))
+        .attr("fill", d => d.properties.NAME == 'Switzerland' ? 'red' : 'black')
+        .attr("stroke-width", 1)
+        )

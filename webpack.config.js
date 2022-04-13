@@ -18,11 +18,14 @@ module.exports = {
         rules: [
             { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
             {test: /\.csv$/, loader: 'csv-loader', options: {
-                dynamicTyping: true,
-                header: true,
-                skipEmptyLines: true
-            }
-        } ]
+                    dynamicTyping: true,
+                    header: true,
+                    skipEmptyLines: true
+                },
+            },
+            {test: /\.geojson$/,
+             loader: 'json-loader'}
+        ]
     },
     plugins: [HtmlWebpackPluginConfig]
 }
