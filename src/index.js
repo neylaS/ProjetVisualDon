@@ -38,15 +38,15 @@ svg.selectAll("path")
 d3.select("head title")
     .text("Map")
 
-d3.select("section.pays")
+d3.select("#pays")
     .style("display", "none")
 
 //button back hides pays section and shows map section
 d3.select("#back")
     .on("click", function () {
-        d3.select("section.pays")   
+        d3.select("#pays")   
             .style("display", "none")
-        d3.select("section.map")
+        d3.select("#map")
             .style("display", "block")
         d3.select("head title")
             .text("Map")
@@ -55,9 +55,9 @@ d3.select("#back")
 //on click country name, show pays section and hide map section
 d3.selectAll("path")
     .on("click", function (d) {
-        d3.select("section.pays")
+        d3.select("#pays")
             .style("display", "block")
-        d3.select("section.map")
+        d3.select("#map")
             .style("display", "none")
         d3.select("head title") 
             .text("Pays")
