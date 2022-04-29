@@ -2,7 +2,6 @@ import * as d3 from 'd3';
 
 import data from '../data/projet_dataviz.geojson'
 
-
 import './pays.js'
 
 const margin = { top: 60, right: 45, bottom: 60, left: 45 },
@@ -118,20 +117,6 @@ d3.selectAll("path")
             .text(d.properties.NAME)
     })  
 
-<<<<<<< HEAD
-    
-  //show country name on hover over country name
-    d3.selectAll("path")
-    .on("mouseover", function (d) {
-        d3.select(this)
-            .attr("stroke", "black")
-            .attr("stroke-width", 2)
-        d3.select("#country-name")
-            .text(d.properties.NAME)
-    })
-   
-    
-=======
 //on hover over country show name
 d3.selectAll("path")
     .on("mouseover", function (d) {
@@ -139,4 +124,3 @@ d3.selectAll("path")
             .text(d.properties.NAME)
     })
 
->>>>>>> 47e28a1720979c8be47b585dd8f83cd5e213b8ca
