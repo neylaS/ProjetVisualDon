@@ -1,8 +1,7 @@
 import * as d3 from 'd3';
 
 import data from '../data/projet_dataviz.geojson'
-import datamusic from '../data/data.json'
-import { getGraph10Genres } from './graphiques/10genres';
+
 
 import './pays.js'
 
@@ -62,3 +61,16 @@ d3.selectAll("path")
         d3.select("head title") 
             .text("Pays")
     })  
+
+    
+  //show country name on hover over country name
+    d3.selectAll("path")
+    .on("mouseover", function (d) {
+        d3.select(this)
+            .attr("stroke", "black")
+            .attr("stroke-width", 2)
+        d3.select("#country-name")
+            .text(d.properties.NAME)
+    })
+   
+    
