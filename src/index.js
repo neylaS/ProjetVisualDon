@@ -3,7 +3,6 @@ import * as d3 from 'd3';
 import data from '../data/projet_dataviz.geojson'
 //import puppeteer from 'puppeteer';
 
-
 import './pays.js'
 
 const margin = {
@@ -91,6 +90,7 @@ d3.select("#back")
         d3.select("head title")
             .text("Map")
     })
+
 //on click on italy, show pays section and hide map section
 
 d3.selectAll("path")
@@ -104,7 +104,6 @@ d3.selectAll("path")
                 .text(d.properties.NAME)
         }
     })
-
 
 //button back hides pays section and shows map section
 d3.select("#back")

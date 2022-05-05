@@ -34,7 +34,7 @@ d3.select("head title")
      }
 
      results.sort((a, b) => b.iteration - a.iteration);
-     console.log(results)
+     //console.log(results)
 
 // List of words
 var myWords = [{word: "Australian Hip Hop", size: "10"}, {word: "Pop Rap", size: "15"}, {word: "Canadian Comtemporary R&B", size: "20"}, {word: "Trap Latino", size: "25"}, {word: "Latin", size: "30"}, {word: "Reggaeton", size: "35"},{word: "Post-Teen-Pop", size: "40"},{word: "Canadian Pop", size: "45"},{word: "Dance Pop", size: "50"},{word: "Pop", size: "55"} ]
@@ -48,15 +48,16 @@ var margin = {top: 10, right: 10, bottom: 10, left: 10},
 //create svg element
 let svg = d3.select("#pays")
      .append("svg")
-     .attr("width", "100%")
-     .attr("height", "100%")
-     .attr("viewBox", "0 0 1000 1000")
+     .attr("width", "50%")
+     .attr("height", "50%")
+     .attr("viewBox", "0 0 500 500")
+     .attr("align", "center")
      .attr("preserveAspectRatio", "xMidYMid meet")
      .attr("id", "pays")
      .append("g")
      //.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-     // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
+// Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
 // Wordcloud features that are different from one word to the other must be here
 var layout = cloud()
 .size([width, height])
