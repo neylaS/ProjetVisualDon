@@ -1,10 +1,7 @@
 import * as d3 from 'd3';
 
-import data from '../data/projet_dataviz.geojson'
-//import puppeteer from 'puppeteer';
-
-
 import './pays.js'
+import './wordcloud.js'
 
 
 
@@ -173,5 +170,5 @@ d3.selectAll("path")
         }
     })
 
-     
+
 
