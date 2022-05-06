@@ -4,19 +4,9 @@ import data from '../data/data-20.csv';
 //import data2 from '../data/chartsSwissPlus2021_France.csv';
 import * as cloud from 'd3-cloud';
 
-
-
-
-//append text to body
-d3.select("section.pays")
-     .append("p")
-     .text("Hello world")
-
 //change title in head
 d3.select("head title")
-    .text("Pays")
-
-
+    .text("WordCloud")
 
      //get the list of 10 most recurent genre in data set
      let genres = data.map(d => d.Genre.replace("[", "").replace("]", "").replaceAll("'","").trim().split(","));
@@ -46,14 +36,14 @@ var margin = {top: 10, right: 10, bottom: 10, left: 10},
 
 //create graph with d3 to show 10 most genre music from data set 
 //create svg element
-let svg = d3.select("#pays")
+let svg = d3.select("#wordCloud")
      .append("svg")
      .attr("width", "50%")
      .attr("height", "50%")
      .attr("viewBox", "0 0 500 500")
      .attr("align", "center")
      .attr("preserveAspectRatio", "xMidYMid meet")
-     .attr("id", "pays")
+     .attr("id", "wordCloud")
      .append("g")
      //.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
