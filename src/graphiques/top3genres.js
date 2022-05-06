@@ -1,6 +1,6 @@
 
 import * as d3 from 'd3';
-import data from '../data/data-20.csv';
+import data from '../../data/data-20.csv';
 
 // show the 3 first tracks at the position 0,1 and 2 for the date : 01.01.21 
 let tracksByDay = data.filter(d => d.Date === "01.01.21");
