@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import data from '../data/data-20.csv';
+import data from '../../data/data-20.csv';
 import * as cloud from 'd3-cloud';
 
  //get the list of 10 most recurent genre in data set
@@ -25,22 +25,22 @@ var myWords = [{word: "Australian Hip Hop", size: "30"}, {word: "Pop Rap", size:
 
 // set the dimensions and margins of the graph
 const margin = {
-    top: 60,
+    top: 100,
     right: 100,
-    bottom: 60,
+    bottom: 100,
     left: 100
 },
 width = window.innerWidth - margin.left - margin.right,
 height = window.innerHeight - margin.top - margin.bottom;
+
 //create graph with d3 to show 10 most genre music from data set 
 //create svg element
-let svg = d3.select("#wordclouds")
+let svg = d3.select("#wordCloud")
  .append("svg")
  .attr("width", "100%")
  .attr("height", "100%")
  .attr("viewBox", "0 0 1000 1000")
  .attr("preserveAspectRatio", "xMidYMid meet")
- .attr("id", "pays")
  .append("g")
  //.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 

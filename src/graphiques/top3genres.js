@@ -1,6 +1,6 @@
 
 import * as d3 from 'd3';
-import data from '../data/data-20.csv';
+import data from '../../data/data-20.csv';
 
 // show the 3 first tracks at the position 0,1 and 2 for the date : 01.01.21 
 let tracksByDay = data.filter(d => d.Date === "01.01.21");
@@ -62,7 +62,7 @@ var data1 = [
      height = 400 - margin.top - margin.bottom;
  
  // append the svg object to the body of the page
- var svg2 = d3.select("#Top3genres")
+ var svg2 = d3.select("#top3genres")
    .append("svg")
      .attr("width", width + margin.left + margin.right)
      .attr("height", height + margin.top + margin.bottom)
