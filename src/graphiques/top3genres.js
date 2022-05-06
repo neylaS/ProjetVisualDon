@@ -62,7 +62,7 @@ var data1 = [
      height = 400 - margin.top - margin.bottom;
  
  // append the svg object to the body of the page
- var svg2 = d3.select("#Top3genres")
+ var svg2 = d3.select("#top3genres")
    .append("svg")
      .attr("width", width + margin.left + margin.right)
      .attr("height", height + margin.top + margin.bottom)
