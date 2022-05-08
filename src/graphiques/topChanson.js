@@ -2,64 +2,87 @@
 import * as d3 from 'd3';
 import data from '../../data/data-20.csv';
 
-// show the 3 first tracks at the position 0,1 and 2 for the date : 01.01.21 
+// show the 5 first tracks at the position 0,1 and 2 for the date : 01.01.21 
 let tracksByDay = data.filter(d => d.Date === "01.01.21");
 //console log the name of the tracks at index 0,1 and 2
 console.log(tracksByDay[0])
 console.log(tracksByDay[1])
 console.log(tracksByDay[2])
+console.log(tracksByDay[3])
+console.log(tracksByDay[4])
 
-// show the 3 first tracks at the position 0,1 and 2 for the date : 01.02.21 
+
+// show the 5 first tracks at the position 0,1 and 2 for the date : 01.02.21 
 let tracksByDay2 = data.filter(d => d.Date === "01.02.21");
 //console log the name of the tracks at index 0,1 and 2
 console.log(tracksByDay2[0])
 console.log(tracksByDay2[1])
 console.log(tracksByDay2[2])
+console.log(tracksByDay2[3])
+console.log(tracksByDay2[4])
 
-// show the 3 first tracks at the position 0,1 and 2 for the date : 01.03.21 
+// show the 5 first tracks at the position 0,1 and 2 for the date : 01.03.21 
 let tracksByDay3 = data.filter(d => d.Date === "01.03.21");
 //console log the name of the tracks at index 0,1 and 2
 console.log(tracksByDay3[0])
 console.log(tracksByDay3[1])
 console.log(tracksByDay3[2])
+console.log(tracksByDay3[3])
+console.log(tracksByDay3[4])
 
-// show the 3 first tracks at the position 0,1 and 2 for the date : 01.04.21 
+// show the 5 first tracks at the position 0,1 and 2 for the date : 01.04.21 
 let tracksByDay4 = data.filter(d => d.Date === "01.04.21");
 //console log the name of the tracks at index 0,1 and 2
 console.log(tracksByDay4[0])
 console.log(tracksByDay4[1])
 console.log(tracksByDay4[2])
+console.log(tracksByDay4[3])
+console.log(tracksByDay4[4])
+
+
+
 
 
 // create 4 data_set
+
+
 var data1 = [
-    {group: "1ère Position", value: 5065542},
-    {group: "2ème Position", value: 3764813},
-    {group: "3ème Position", value: 3560869}
+
+    {group: "1ère Position", value: 5065542, src: "assets/img/Badbunny.jpg"},
+    {group: "2ème Position", value: 3764813, src: "assets/img/c"},
+    {group: "3ème Position", value: 3560869, src: "assets/img/Karolg.jpg"},
+    {group: "4ème Position", value: 3402064, src: "assets/img/24Goldn.jpg"},
+    {group: "5ème Position", value: 2939820, src: "assets/img/Arianagrande.jpg"}
  ];
  
  var data2 = [
-    {group: "1ère Position", value: 7647230},
-    {group: "2ème Position", value: 3735645},
-    {group: "3ème Position", value: 3013315}
+    {group: "1ère Position", value: 7647230,src: "assets/img/Oliviarodrigo.jpg"},
+    {group: "2ème Position", value: 3735645,src: "assets/img/Badbunny.jpg"},
+    {group: "3ème Position", value: 3013315,src: "assets/img/Theweeknd.jpg"},
+    {group: "4ème Position", value: 3000536,src: "assets/img/Theweeknd.jpg"},
+    {group: "5ème Position", value: 2858425,src: "assets/img/24Goldn.jpg"}
  ];
 
  var data3 = [
-    {group: "1ère Position", value: 5202794},
-    {group: "2ème Position", value: 3966280},
-    {group: "3ème Position", value: 3280968}
+    {group: "1ère Position", value: 5202794, src: "assets/img/Oliviarodrigo.jpg" },
+    {group: "2ème Position", value: 3966280, src: "assets/img/Theweeknd.jpg"},
+    {group: "3ème Position", value: 3280968, src: "assets/img/Theweeknd.jpg"},
+    {group: "4ème Position", value: 3156979, src: "assets/img/Kaliuchis.jpg"},
+    {group: "5ème Position", value: 3151274, src: "assets/img/Badbunny.jpg"}
  ];
  var data4 = [
-    {group: "1ère Position", value: 7540770},
-    {group: "2ème Position", value: 6980543},
-    {group: "3ème Position", value: 4426518}
+    {group: "1ère Position", value: 7540770,src: "assets/img/Justinbieber.jpg"},
+    {group: "2ème Position", value: 6980543,src: "assets/img/Lilnasx.jpg"},
+    {group: "3ème Position", value: 4426518,    src: "assets/img/Maskwolf.jpg"},
+    {group: "4ème Position", value: 3905019,    src: "assets/img/Oliviarodrigo.jpg"},
+    {group: "5ème Position", value: 3753723,    src: "assets/img/Theweeknd.jpg"}
  ];
 
  
  // set the dimensions and margins of the graph
  var margin = {top: 30, right: 30, bottom: 70, left: 60},
-     width = 460 - margin.left - margin.right,
-     height = 400 - margin.top - margin.bottom;
+     width = 600 - margin.left - margin.right,
+     height = 600 - margin.top - margin.bottom;
  
 
  // append the svg object to the body of the page
@@ -71,7 +94,7 @@ let svg2 = d3.select("#topChanson")
      .attr("transform",
            "translate(" + margin.left + "," + margin.top + ")");
  
- // X axis
+
  var x = d3.scaleBand()
    .range([ 0, width ])
    .domain(data1.map(function(d) { return d.group; }))
@@ -82,7 +105,7 @@ let svg2 = d3.select("#topChanson")
  
  // Add Y axis
  var y = d3.scaleLinear()
-   .domain([0, 7000000])
+   .domain([0, 8000000])
    .range([ height, 0]);
  svg2.append("g")
    .attr("class", "myYaxis")
@@ -106,7 +129,107 @@ let svg2 = d3.select("#topChanson")
        .attr("width", x.bandwidth())
        .attr("height", function(d) { return height - y(d.value); })
        .attr("fill", "#69b3a2")
+       .attr("opacity", 0.5)
+    //add a circle to the top of the bars to put an image
+    svg2.selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+    //puut the circles on the top of the bars in 
+    .attr("cx", function(d) { return x(d.group) + x.bandwidth() / 2; })
+    .attr("cy", function(d) { return y(d.value); })
+    .attr("r", 20)
+    .attr("fill", "#69b3a2")
+    .attr("stroke", "#69b3a2")
+    .attr("stroke-width", 1)
+    .attr("opacity", 1)
+    //append an image to the circles
+    svg2.selectAll("image")
+    .data(data)
+    .enter()
+    .append("image")
+    .attr("xlink:href", function(d) { return d.src; })
+    .attr("x", function(d) { return x(d.group) + x.bandwidth() / 2 - 20; })
+    .attr("y", function(d) { return y(d.value) - 20; })
+    .attr("width", 40)
+    .attr("height", 40)
+    .attr("opacity", 1)
+
+  
+   
+
+        
+
  }
  
  // Initialize the plot with the first dataset
  update(data1)
+ //when on click on the button, update the plot with the second dataset and the position of the circles
+
+
+    d3.select("#button2").on("click", function() {
+        update(data2)
+        d3.selectAll("circle").remove()
+        svg2.selectAll("circle")
+        .data(data2)
+        .enter()
+        .append("circle")
+        .attr("cx", function(d) { return x(d.group) + x.bandwidth() / 2; })
+        .attr("cy", function(d) { return y(d.value); })
+        .attr("r", 20)
+        .attr("fill", "#69b3a2")
+        .attr("stroke", "#69b3a2")
+        .attr("stroke-width", 1)
+        .attr("opacity", 1)
+    })
+    
+    //when on click on the button, update the plot with the third dataset
+    d3.select("#button3").on("click", function() {
+        update(data3)
+        d3.selectAll("circle").remove()
+        svg2.selectAll("circle")
+        .data(data3)
+        .enter()
+        .append("circle")
+        .attr("cx", function(d) { return x(d.group) + x.bandwidth() / 2; })
+        .attr("cy", function(d) { return y(d.value); })
+        .attr("r", 20)
+        .attr("fill", "#69b3a2")
+        .attr("stroke", "#69b3a2")
+        .attr("stroke-width", 1)
+        .attr("opacity", 1)
+    })
+    
+    //when on click on the button, update the plot with the fourth dataset
+    d3.select("#button4").on("click", function() {
+        update(data4)
+        d3.selectAll("circle").remove()
+        svg2.selectAll("circle")
+        .data(data4)
+        .enter()
+        .append("circle")
+        .attr("cx", function(d) { return x(d.group) + x.bandwidth() / 2; })
+        .attr("cy", function(d) { return y(d.value); })
+        .attr("r", 20)
+        .attr("fill", "#69b3a2")
+        .attr("stroke", "#69b3a2")
+        .attr("stroke-width", 1)
+        .attr("opacity", 1)
+    })
+    //when on click on the button, update the plot with the first dataset
+    d3.select("#button1").on("click", function() {
+        update(data1)
+        d3.selectAll("circle").remove()
+        svg2.selectAll("circle")
+        .data(data1)
+        .enter()
+        .append("circle")
+        .attr("cx", function(d) { return x(d.group) + x.bandwidth() / 2; })
+        .attr("cy", function(d) { return y(d.value); })
+        .attr("r", 20)
+        .attr("fill", "#69b3a2")
+        .attr("stroke", "#69b3a2")
+        .attr("stroke-width", 1)
+        .attr("opacity", 1)
+    })
+    
