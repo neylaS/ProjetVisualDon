@@ -74,3 +74,6 @@ function draw(words) {
        .text(function(d) { return d.text; });
 }
 
+
+//get the 3 most streamed track of every genre from data set
+
