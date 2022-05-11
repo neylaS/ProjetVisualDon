@@ -61,7 +61,7 @@ import dataArtiste from '../../data/artiste.csv';
     },
 ]; */
 
-
+/* 
 // set the dimensions and margins of the graph
 const margin = {top: 100, right: 0, bottom: 0, left: 0},
     width = 460 - margin.left - margin.right,
@@ -113,10 +113,10 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
         .text(function(d){return(d.Country)})
         .attr("transform", function(d) { return (x(d.Country) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)"; })
         .style("font-size", "11px")
-        .attr("alignment-baseline", "middle")
+        .attr("alignment-baseline", "middle") */
 
 // get the list of 10 recurent artists in data set
-let artists = data.map(d => d.Artist.replace("[", "").replace("]", "").replaceAll("'", "").trim().split(","));
+/* let artists = data.map(d => d.Artist.replace("[", "").replace("]", "").replaceAll("'", "").trim().split(","));
 console.log(artists);
 let results = [];
 for (const tabArtist of artists) {
@@ -129,7 +129,7 @@ for (const tabArtist of artists) {
     }
 }
 results.sort((a, b) => b.iteration - a.iteration);
-console.log(results) 
+console.log(results)  */
 
 //create list of 10 most recurent artists
 /* let listeArtist = [];
