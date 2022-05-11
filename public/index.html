@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -13,58 +14,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 
     <title>Tendances Spotify</title>
+
     
-<!-- Create a div where the graph will take place -->
-<div id="top10Genres" class="hidden"></div>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
-<style>
-    h1,h2,h3,h4,h5,h6 {font-family: "Gotham", sans-serif, bold}
-    body {font-family: "Gotham", sans-serif, bold} 
-</style>
-  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
 </head>
+
 <body>
-    <!-- Navigation bar with social media icons -->
-<div class="w3-bar w3-black w3-hide-small">
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-GitHub"></i></a>
-</div>
-<header class="w3-container w3-center w3-padding-48 w3-white">
-    <h1 class="w3-xxxlarge"><b>TENDANCES SPOTIFY 2021</b></h1>
-    
-  </header>
 
-<section id="wordCloud" class="w3-container w3-center w3-padding-64 w3-white">
-    <h2>Word Cloud</h2>
-</section>
+    <div class="w3-bar w3-black w3-hide-small">
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-GitHub"></i></a>
+    </div>
+    <header class="w3-container w3-center w3-padding-48 w3-white">
+        <h1 class="w3-xxxlarge"><b>TENDANCES SPOTIFY 2021</b></h1>
+    </header>
 
-<section id="top3genres" class="w3-container w3-center w3-padding-64 w3-white">
-    <h2>Top 3 chansons par genre</h2>
-</section>
+    <section id="wordCloud" class="w3-container w3-center w3-padding-64 w3-white">
+        <h2>Word Cloud</h2>
+    </section>
 
-<section id="topChanson" class="w3-container w3-center w3-padding-64 w3-white">
-    <h2>Top 5 Chanson par position par mois</h2>
-    <button id="button1">Janvier</button>
-    <button id="button2">Février</button>
-    <button id="button3">Mars</button>
-    <button id="button4">Avril</button>
-    <br>
-    <br>
-</section>
+    <section id="top3genres" class="w3-container w3-center w3-padding-64 w3-white">
+        <h2>Top 3 chansons par genre</h2>
+    </section>
 
-<section id="artiste" class="w3-container w3-center w3-padding-64 w3-white">
-    <h2>Artistes plus écouté</h2>
-</section>
+    <section id="topChanson" class="w3-container w3-center w3-padding-64 w3-white">
+        <h2>Top 5 Chanson par position par mois</h2>
+        <button id="button1">Janvier</button>
+        <button id="button2">Février</button>
+        <button id="button3">Mars</button>
+        <button id="button4">Avril</button>
+        <br>
+        <br>
+    </section>
 
-
-
-</section>
-
-<footer>
-</footer>
+    <section id="artiste" class="w3-container w3-center w3-padding-64 w3-white">
+        <h2>Artistes plus écouté</h2>
+        <a class="scrollNext" href="#wordCloud">Top</a>
+    </section>
 
 </body>
+
 </html>
