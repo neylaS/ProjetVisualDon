@@ -139,7 +139,7 @@ let totalStreams10 = data.filter(d => d.Artist === "Masked Wolf").length;
 console.log(totalStreams10); */
 
 
-// for each artist in listeArtist, add number of streams for each track
+/* // for each artist in listeArtist, add number of streams for each track
 let numberStreams = [];
 for (const artist of listeArtist) { // for each artist
     for (const track of tracks) { // for each track 
@@ -150,6 +150,6 @@ for (const artist of listeArtist) { // for each artist
         }
     }
 }
-console.log(numberStreams)  // number of streams for each artist
+console.log(numberStreams)  // number of streams for each artist */
 
 // get the list of 10 recurent artists in data set
