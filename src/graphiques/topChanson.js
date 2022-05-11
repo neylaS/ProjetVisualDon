@@ -53,31 +53,38 @@ var data1 = [
         group: "1ère Position",
         value: 5065542,
         src: "assets/img/Badbunny.png",
-        legend : "Dakiti de Bad Bunny"
+        legend : "Dakiti de Bad Bunny",
+        name : "Bad Bunny"
     },
     {
         group: "2ème Position",
         value: 3764813,
         src: "assets/img/Theweeknd.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Blinding Lights de The Weeknd",
+        name : "The Weeknd"
     },
     {
         group: "3ème Position",
         value: 3560869,
         src: "assets/img/Karolg.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "BICHOTA de Karol G",
+        name : "Karolg"
     },
     {
         group: "4ème Position",
         value: 3402064,
         src: "assets/img/24Goldn.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Mood de 24 Gold",
+        name : "24 Gold"
+
     },
     {
         group: "5ème Position",
         value: 2939820,
         src: "assets/img/Ariannagrande.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Positions de Ariana Grande",
+        name : "Arianna Grande"
+        
     }
 ];
 
@@ -85,31 +92,38 @@ var data2 = [{
         group: "1ère Position",
         value: 7647230,
         src: "assets/img/Oliviarodrigo.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Drivers License de Olivia Rodrigo",
+        name : "Olivia Rodrigo"
     },
     {
         group: "2ème Position",
         value: 3735645,
         src: "assets/img/Badbunny.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Dakiti de Bad Bunny",
+        name : "Bad Bunny"
     },
     {
         group: "3ème Position",
         value: 3013315,
         src: "assets/img/Theweeknd.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Blinding Lights de The Weeknd",
+        name : "The Weeknd"
+
     },
     {
         group: "4ème Position",
         value: 3000536,
         src: "assets/img/Theweeknd.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Save Your Tears de The Weeknd",
+        name : "The Weeknd"
+
     },
     {
         group: "5ème Position",
         value: 2858425,
         src: "assets/img/24Goldn.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Mood de 24 Gold",
+        name : "24 Gold"
     }
 ];
 
@@ -117,62 +131,73 @@ var data3 = [{
         group: "1ère Position",
         value: 5202794,
         src: "assets/img/Oliviarodrigo.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Drivers License de Olivia Rodrigo",
+        name : "Olivia Rodrigo"
     },
     {
         group: "2ème Position",
         value: 3966280,
         src: "assets/img/Theweeknd.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Save Your Tears de The Weeknd",
+        name : "The Weeknd"
     },
     {
         group: "3ème Position",
         value: 3280968,
         src: "assets/img/Theweeknd.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Blinding Lights de The Weeknd",
+        name : "The Weeknd"
+
     },
     {
         group: "4ème Position",
         value: 3156979,
         src: "assets/img/Kaliuchis.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Telepatia de Kaliuchis",
+        name : "Kaliuchis"
     },
     {
         group: "5ème Position",
         value: 3151274,
         src: "assets/img/Badbunny.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Dakiti de Bad Bunny",
+        name : "Bad Bunny"
     }
 ];
 var data4 = [{
         group: "1ère Position",
         value: 7540770,
         src: "assets/img/Justinbieber.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Peaches de Justin Bieber",
+        name : "Justin Bieber"
     },
     {
         group: "2ème Position",
         value: 6980543,
         src: "assets/img/Lilnasx.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Montero de Lil Nas X",
+        name : "Lil Nas X"
     },
     {
         group: "3ème Position",
         value: 4426518,
         src: "assets/img/Maskwolf.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Astronaute In The Ocean de Mask Wolf",
+        name : "Mask Wolf"
     },
     {
         group: "4ème Position",
         value: 3905019,
         src: "assets/img/Oliviarodrigo.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Drivers License de Olivia Rodrigo",
+        name : "Olivia Rodrigo"
     },
     {
         group: "5ème Position",
         value: 3753723,
         src: "assets/img/Theweeknd.png",
-        legend : "Blinding Lights de The Weeknd"
+        legend : "Save Your Tears de The Weeknd",
+        name : "The Weeknd"
     }
 ];
 
@@ -264,6 +289,10 @@ function update(data) {
         .attr("width", 40)
         .attr("height", 40)
         .attr("opacity", 1)
+       
+
+
+
 
 
 
@@ -373,3 +402,73 @@ d3.select("#button1").on("click", function () {
 
 })
 
+//create tooltip
+var tooltip = d3.select("#topChanson")
+.append("div")
+.style("opacity", 0)
+.attr("class", "tooltip")
+.style("background-color", "black")
+.style("color", "white")
+.style("border-radius", "5px")
+.style("padding", "10px")
+
+
+//on hover the image, show the d.legend
+svg2.selectAll("image")
+    .on("mouseover", function (event) {
+        d3.select(this)
+            .transition()
+            .duration(200)
+            .style("opacity", .9)
+        this.html(d.legend)
+        d3.select("#tooltip")
+            .style("left", (event.pageX) + "px")
+            .style("top", (event.pageY - 28) + "px")
+            .style("opacity", 1)
+            .text(d.legend)
+            .select(d.legend)
+            d3.select("#tooltip").classed("hidden", false)
+
+    }
+        )
+    .on("mouseout", function (d) {
+        tooltip.transition()
+            .duration(500)
+            .style("opacity", 0)
+            d3.select("#tooltip").classed("hidden", true)
+    }
+        )
+    
+/* 
+///on hover, show the name of the artist
+svg2.selectAll("image")
+    .on("mouseover", function (event) {
+        d3.select(this)
+            .transition()
+            .duration(200)
+            .attr("opacity", 0.5)
+            console.log(d.name)
+
+        d3.select("#tooltip")
+            .style("left", event.pageX + "px")
+            .style("top", event.pageY + "px")
+            .select("#value")
+            .text(this.getAttribute('href'))
+
+        d3.select("#tooltip").classed("hidden", false)
+    }
+        )
+    .on("mouseout", function (d) {
+        d3.select(this)
+            .transition()
+            .duration(200)
+            .attr("opacity", 1)
+        d3.select("#tooltip").classed("hidden", true)
+    }
+
+        )  */
+
+
+
+       
+ 

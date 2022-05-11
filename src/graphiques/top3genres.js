@@ -1,17 +1,11 @@
-/* Top 3 chansons par genre (Circle Packing) */
+/* /* Top 3 chansons par genre (Circle Packing) */
 
 import * as d3 from 'd3';
 import data from '../../data/data-20.csv';
 
-// set the dimensions and margins of the graph
-var width = 500
-var height = 500
 
-// append the svg object to the body of the page
-var svg = d3.select("#top3genres")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height)
+
+
 
  //get the list of 10 most recurent genre in data set
  let genres = data.map(d => d.Genre.replace("[", "").replace("]", "").replaceAll("'","").trim().split(","));
@@ -29,7 +23,11 @@ var svg = d3.select("#top3genres")
  }
 
  results.sort((a, b) => b.iteration - a.iteration);
-//console.log(results)
+console.log(results)
+
+
+
+//get the list
 
 
 /* let listeGenre = [];
@@ -147,3 +145,218 @@ for (let i = 0; i < 10; i++) {
         d.fx = null;
         d.fy = null;
     } */
+
+    let TrapLatino = {
+        parent : "Trap Latino",
+        children : [{
+            name: "DÁKITI",
+            group: 1,
+            size: 10
+    
+        }, {
+            name: "Fiel",
+            group: 1,
+            size: 10
+        }, {
+            name: "Bandido",
+            group: 1,
+            size: 10
+        }
+    ] };
+
+    let Latin =  {
+        parent : "Latin",
+        children : [{
+            name: "Qué Más Pues?",
+            group: 2,
+            size: 10
+    
+        }, {
+            name: "LA NOCHE DE ANOCHE",
+            group: 2,
+            size: 10
+    
+        }, {
+            name: "AM",
+            group: 2,
+            size: 10
+        }]};
+let PopRap = {
+        parent : "Pop Rap",
+        children : [{
+            name: "HOLIDAY,",
+            group: 3,
+            size: 10
+        }, {
+            
+            name: "MONTERO",
+            group: 3,
+            size: 10
+        }, {
+            name : "Good Days",
+            group: 3,
+            size: 10
+            
+        }]};
+
+        let Pop = {
+            parent : "Pop",
+         children : [{
+            name: "Peaches",
+            group: 4,
+            size: 10
+        }, {
+            name: "telepatía ",
+            group: 4,
+            size: 10
+        }, {
+            name: "you broke me first",
+            group: 4,
+            size: 10
+        }]};
+
+        let Reggaeton = {
+            parent : "Reggaeton",
+            children : [{
+            name: "Pareja Del Año",
+            group: 5,
+            size: 10
+        }, {
+            name: "Hawái",
+            group: 5,
+            size: 10
+        }, {
+            name: "BICHOTA",
+            group: 5,
+            size: 10
+        }]};
+        let DancePop = {
+            parent : "Dance Pop",
+            children : [{
+            name: "Up",
+            group: 6,
+            size: 10
+        }, {
+            name: "Streets",
+            group: 6,
+            size: 10
+        }, {
+            name: "Baila Conmigo",
+            group: 6,
+            size: 10
+        }]};
+        let AustralianHipHop = {
+            parent : "Australian Hip Hop",
+            children : [{
+            name: "WITHOUT YOU",
+            group: 7,
+            size: 10
+        }, {
+            name: "Astronaut In The Ocean",
+            group: 7,
+            size: 10
+        }, {
+            name: "Dance Monkey",
+            group: 7,
+            size: 10
+        }]};
+
+        let PostTeenPop = {
+            parent : "Post-Teen Pop",
+            children : [{
+            name: "Anyone",
+            group: 8,
+            size: 10
+        }, {
+            name: "As I Am",
+            group: 8,
+            size: 10
+        }, {
+            name: "positions",
+            group: 8,
+            size: 10
+        }
+        ]};
+        let CanadianPop = {
+            parent : "Canadian Pop",    
+            children : [{
+
+            name: "Unstable",
+            group: 9,
+            size: 10
+        }, {
+            name: "Hold On",
+            group: 9,
+            size: 10
+        }, {
+            name: "Monster",
+            group: 9,
+            size: 10
+
+        }
+        ]};
+        let CanadianComtemporaryRB = {
+            parent : "Canadian Comtemporary R&B",
+            children : [{
+            name: "Blinding Lights",
+            group: 10,
+            size: 10
+        }, {
+            name: "Save Your Tears",
+            group: 10,
+            size: 10
+        }
+    ]
+    };
+
+// create circles for every parent 
+   
+  /*   let nodes = d3.hierarchy(TrapLatino)
+        .sum(function (d) { return d.size; })
+        .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
+        
+    let nodes2 = d3.hierarchy(Latin)
+        .sum(function (d) { return d.size; })
+        .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
+
+    let nodes3 = d3.hierarchy(PopRap)
+        .sum(function (d) { return d.size; })
+        .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
+
+    let nodes4 = d3.hierarchy(Pop)
+        .sum(function (d) { return d.size; })
+        .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
+
+    let nodes5 = d3.hierarchy(Reggaeton)
+        .sum(function (d) { return d.size; })
+        .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
+
+    let nodes6 = d3.hierarchy(DancePop)
+        .sum(function (d) { return d.size; })
+        .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
+
+    let nodes7 = d3.hierarchy(AustralianHipHop)
+        .sum(function (d) { return d.size; })
+        .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
+
+    let nodes8 = d3.hierarchy(PostTeenPop)
+        .sum(function (d) { return d.size; })
+        .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
+
+    let nodes9 = d3.hierarchy(CanadianPop)
+        .sum(function (d) { return d.size; })
+        .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
+
+    let nodes10 = d3.hierarchy(CanadianComtemporaryRB)
+        .sum(function (d) { return d.size; })
+        .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
+ */
+
+// A scale that gives a X target position for each group
+
+//create the svg element
+    let svg = d3.select("#top3genres")
+        .append("svg")
+        .attr("width", 50)
+
+ 
