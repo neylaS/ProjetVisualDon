@@ -22,7 +22,7 @@ var svg = d3.select("#artiste")
 
 // get the list of 10 recurent artists in data set
 let artists = data.map(d => d.Artist.replace("[", "").replace("]", "").replaceAll("'", "").trim().split(","));
-
+console.log(artists);
 let results = [];
 for (const tabArtist of artists) {
     for (const artist of tabArtist) {
@@ -34,14 +34,29 @@ for (const tabArtist of artists) {
     }
 }
 results.sort((a, b) => b.iteration - a.iteration);
-//console.log(results)
+console.log(results) 
 
 //create list of 10 most recurent artists
-let listeArtist = [];
+/* let listeArtist = [];
 for (let i = 0; i < 10; i++) {
     listeArtist[i] = results[i].name;
+    console.log(results[i].name)
     console.log(listeArtist[i])
-}
+} */
+
+//create table
+/* let listeArtist = [
+    { name: "The Weeknd", streams: 0 },
+    { name: "Olivia Rodrigo", streams: 0 },
+    { name: "Bad Bunny", streams: 0 },
+    { name: "Justin Bieber", streams: 0 },
+    { name: "Dua Lipa", streams: 0 },
+    { name: "Doja Cat", streams: 0 },
+    { name: "Arianna Grande", streams: 0 },
+    { name: "The Kid LAROI", streams: 0 },
+    { name: "Tiësto", streams: 0 },
+    { name: "Masked Wolf", streams: 0 }
+] */
 
 // get the list of tracks
 let tracks = data.map(d => d.TrackName);
@@ -52,7 +67,7 @@ let numberStreams = [];
 for (const artist of listeArtist) { // for each artist
     for (const track of tracks) { // for each track 
         if (track.includes(artist)) { // if artist is in track
-            numberStreams.push(track.filter(d => d.includes(artist)).length); // add number of streams for artist
+            //numberStreams.push(track.filter(d => d.includes(artist)).length); // add number of streams for artist
         } else { // if artist is not in track
             numberStreams.push(0); // add 0 to numberStreams
         }
