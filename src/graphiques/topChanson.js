@@ -215,7 +215,7 @@ var margin = {
 
 
 // append the svg object to the body of the page
-let svg2 = d3.select("#topChanson")
+let svg2 = d3.select("#topChanson .content .buttonChanson")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -470,5 +470,19 @@ svg2.selectAll("image")
 
 
 
-       
- 
+// description
+let des = d3.select("#topChanson .content")
+    .append("p")
+    .attr("class", "description")
+    .text("Description du graphique")        
+
+ // add button to go to next section
+let button = d3.select("#topChanson")
+.append("button")
+.attr("id", "button")
+.text("Next")
+.on("click", function () {
+     //go to next section
+     window.location.href = "#artiste";
+}
+);

@@ -30,7 +30,7 @@ console.log(results) */
 
 
 //Create the canvas and context
-/* let svg3 = d3.select("#top3genres")
+/* let svg3 = d3.select("#top3genres .content")
 .append("svg")
 .attr("width", 400)
 .attr("height", 400)
@@ -458,6 +458,20 @@ let PopRap = {
 // A scale that gives a X target position for each group
 
 //create the svg element
-    
+
+// description
+let des = d3.select("#top3genres .content")
+.append("p")
+.attr("class", "description")
+.text("Description du graphique")
  
- 
+// add button to go to next section
+let button = d3.select("#top3genres")
+     .append("button")
+     .attr("id", "button")
+     .text("Next")
+     .on("click", function () {
+          //go to next section
+          window.location.href = "#topChanson";
+     }
+     );
