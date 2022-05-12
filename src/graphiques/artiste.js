@@ -11,7 +11,7 @@ const margin = {top: 100, right: 0, bottom: 0, left: 0},
     outerRadius = Math.min(width, height) / 2;   // the outerRadius goes from the middle of the SVG area to the border
 
 // append the svg object
-const svg = d3.select("#artiste")
+const svg = d3.select("#artiste .content")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -74,4 +74,3 @@ let button = d3.select("#artiste")
           window.location.href = "#wordCloud";
      }
      );
-
