@@ -6,111 +6,111 @@
     {"id" : 2,
      "name": "Latin" 
     },
-    {id" : 3,
+    {"id" : 3,
      "name": "Pop Rap" 
     },
-    {id" : 4,
+    {"id" : 4,
      "name": "Pop"
     },
-    {id" : 5,
+    {"id" : 5,
      "name": "Reggaeton" 
     },
-    {id" : 6,
+    {"id" : 6,
      "name": "Dance Pop" 
     },
-    {id" : 7,
+    {"id" : 7,
      "name": "Australian Hip Hop" },
-    {id" : 8,
+    {"id" : 8,
      "name": "Post-Teen Pop" },
-    {id" : 9,
+    {"id" : 9,
      "name": "Canadian Pop" },
-    {id" : 10,
+    {"id" : 10,
      "name": "Canadian Comtemporary R&B" },
-    {id" : 11,
+    {"id" : 11,
      "name": "DÁKITI"
      "parent" : 1},
-    {id" : 12,
+    {"id" : 12,
      "name": "Fiel"
      "parent" : 1},
-    {id" : 13,
+    {"id" : 13,
      "name": "Bandido"
      "parent" : 1},
-     {id" : 14,
+     {"id" : 14,
      "name": "Qué Más Pues?"
      "parent" : 2},
-    {id" : 15,
+    {"id" : 15,
      "name": "LA NOCHE DE ANOCHE"
      "parent" : 2},
-    {id" : 16,
+    {"id" : 16,
      "name": "AM"
      "parent" : 2},
-     {id" : 17,
+     {"id" : 17,
      "name": "HOLIDAY"
      "parent" : 3},
-    {id" : 18,
+    {"id" : 18,
      "name": "MONTERO"
      "parent" : 3},
-    {id" : 19,
+    {"id" : 19,
      "name": "Good Days"
      "parent" : 3},
-     {id" : 20,
+     {"id" : 20,
      "name": "Peaches"
      "parent" : 4},
-    {id" : 21,
+    {"id" : 21,
      "name": "telepatía"
      "parent" : 4},
-    {id" : 22,
+    {"id" : 22,
      "name": "you broke me first"
      "parent" : 4},
-    {id" : 23,
+    {"id" : 23,
      "name": "Pareja Del Año"
      "parent" : 5},
-    {id" : 24,
+    {"id" : 24,
      "name": "Hawái"
      "parent" : 5},
-    {id" : 25,
+    {"id" : 25,
      "name": "BICHOTA"
      "parent" : 5},
-     {id" : 26,
+     {"id" : 26,
      "name": "UP"
      "parent" : 6},
-    {id" : 27,
+    {"id" : 27,
      "name": "Streets"
      "parent" : 6},
-    {id" : 28,
+    {"id" : 28,
      "name": "Baila conmigo"
      "parent" : 6},
-      {id" : 29,
+      {"id" : 29,
      "name": "WITHOUT YOU"
      "parent" : 7},
-    {id" : 30,
+    {"id" : 30,
      "name": "Astronaut In The Ocean"
      "parent" : 7},
-    {id" : 31,
+    {"id" : 31,
      "name": "Dance Monkey"
      "parent" : 7},
-      {id" : 32,
+      {"id" : 32,
      "name": "Anyone"
      "parent" : 8},
-    {id" : 33,
+    {"id" : 33,
      "name": "As I Am"
      "parent" : 8},
-    {id" : 34,
+    {"id" : 34,
      "name": "Positions"
      "parent" : 8},
-       {id" : 35,
+       {"id" : 35,
      "name": "Unstable"
      "parent" : 9},
-    {id" : 36,
+    {"id" : 36,
      "name": "Hold On"
      "parent" : 9},
-    {id" : 37,
+    {"id" : 37,
      "name": "Monster"
      "parent" : 9},
-      {id" : 38,
+      {"id" : 38,
      "name": "Blinding Lights"
      "parent" : 10},
-    {id" : 39,
+    {"id" : 39,
      "name": "Save Your Tears"
      "parent" : 10}
     ]
