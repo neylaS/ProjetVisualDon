@@ -1,0 +1,84 @@
+{
+    "root": "genres",
+    "children": [
+     {
+      "parent": "Trap Latino",
+      "children": [
+         
+           {"name": "DÁKITI", "ID": "1.1.2.1", "size":20},
+           {"name": "Fiel", "ID": "1.1.2.2", "size":20},
+           {"name": "Bandido", "ID": "1.1.2.3", "size":20}
+        ]
+       },
+       {
+        "parent": "Latin",
+        "children": [
+         {"name": "Qué Más Pues?", "ID": "1.1.1.1", "size":20},
+         {"name": "LA NOCHE DE ANOCHE", "ID": "1.1.1.2", "size":20},
+         {"name": "AM", "ID": "1.1.1.3", "size":20}
+        ]
+    },
+    {
+        "parent": "Pop Rap",
+        "children": [
+         {"name": "HOLIDAY", "ID": "1.2.2.1", "size":20},
+         {"name": "MONTERO", "ID": "1.2.2.2", "size":20},
+         {"name": "Good Days", "ID": "1.2.2.3", "size":20}
+        ]
+    },
+    {
+        "parent": "Pop",
+        "children": [
+         {"name": "Peaches", "ID": "1.2.7.1", "size":20},
+         {"name": "telepatía", "ID": "1.2.7.2", "size":20},
+         {"name": "you broke me first", "ID": "1.2.7.3", "size":20}
+        ]
+    },
+    {
+        "parent": "Reggaeton",
+        "children": [
+         {"name": "Pareja Del Año", "ID": "1.2.4.1", "size":20},
+         {"name": "Hawái", "ID": "1.2.4.2", "size":20},
+         {"name": "BICHOTA", "ID": "1.2.4.3", "size":20}
+        ]
+    },
+    {  "parent": "Dance Pop",
+        "children": [
+         {"name": "Up", "ID": "1.2.1.1", "size":20},
+         {"name": "Streets", "ID": "1.2.1.2", "size":20},
+         {"name": "Baila Conmigo", "ID": "1.2.1.3", "size":20}
+        ]
+    },
+    {  "parent": "Australian Hip Hop",
+        "children": [
+            {"name":  "WITHOUT YOU", "ID": "1.2.6.1", "size":20},
+            {"name": "Astronaut In The Ocean", "ID": "1.2.6.2", "size":20},
+            {"name": "Dance Monkey", "ID": "1.2.6.3", "size":20}
+        ]
+    },
+    {
+        "parent": "Post-Teen Pop",
+     "children": [
+      {"name": "Anyone", "ID": "1.2.8.1", "size":20},
+      {"name": "As I Am", "ID": "1.2.8.2", "size":20},
+      {"name": "Positions", "ID": "1.2.8.3", "size":20}
+    ]
+   },
+   {
+    "parent": "Canadian Pop",
+    "children": [
+     {"name": "Unstable", "ID": "1.2.5.1", "size":20},
+     {"name": "Hold On", "ID": "1.2.5.2", "size":20},
+     {"name": "Monster", "ID": "1.2.5.3", "size":20}
+
+    ]
+},
+{
+    "parent": "Canadian Comtemporary R&B",
+ "children": [
+  {"name": "Blinding Lights", "ID": "1.2.3.1", "size":20},
+  {"name": "Save Your Tears", "ID": "1.2.3.2", "size":20}
+]
+}
+]
+}

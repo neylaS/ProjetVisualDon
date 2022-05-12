@@ -1,13 +1,15 @@
-/* /* Top 3 chansons par genre (Circle Packing) */
+/* /* /* Top 3 chansons par genre (Circle Packing) */
 
 import * as d3 from 'd3';
-import data from '../../data/data-20.csv';
+/* import data from '../../data/data-20.csv'; */
+import data from '../../data/top3genres.json';
 
 
 
 
 
- //get the list of 10 most recurent genre in data set
+
+ /* //get the list of 10 most recurent genre in data set
  let genres = data.map(d => d.Genre.replace("[", "").replace("]", "").replaceAll("'","").trim().split(","));
 
  let results = [];
@@ -23,13 +25,114 @@ import data from '../../data/data-20.csv';
  }
 
  results.sort((a, b) => b.iteration - a.iteration);
-console.log(results)
+console.log(results) */
 
 
 
-//get the list
+//Create the canvas and context
+/* let svg3 = d3.select("#top3genres")
+.append("svg")
+.attr("width", 400)
+.attr("height", 400)
 
 
+var packLayout = d3.pack()
+.size([300, 300]);
+
+//get the element root from data
+let root = d3.hierarchy(data)
+.sum(d => d.root)
+.sort((a, b) => b.root - a.root);
+console.log(root)
+
+//get the children of the root
+let nodes = packLayout(root).children;
+console.log(nodes)
+
+//Pour les 10 objets du nodes, créer un nouveau cercle 
+svg3.selectAll("circle")
+.data(nodes)
+.enter()
+.append("circle") */
+
+
+
+
+
+/* var rootNode = d3.hierarchy(data)
+
+rootNode.sum(function(d) {
+return d.name;
+});
+
+packLayout(rootNode);
+
+var nodes = d3.select("#top3genres")
+.selectAll('g')
+.data(rootNode.descendants())
+.join('g')
+
+
+nodes
+.append('circle')
+  .attr('cx', 100)
+  .attr('cy', 100)
+  .attr('r', 50)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2');
+ */
+
+
+
+/* 	//Size of the circle pack layout
+	var diameter = Math.min(width*0.9, height*0.9); */
+
+		/* //The grey colors of the circles depend on the depth
+		var colorCircle = d3.scaleOrdinal()
+				.domain([0,1,2,3])
+				.range(['#bfbfbf','#838383','#4c4c4c','#1c1c1c']);
+
+		//Initialize the circle pack layout
+		var pack = d3.pack()
+			.padding(1)
+			.size([diameter, diameter])
+			.value(function(d) { return d.size; })
+			.sort(function(d) { return d.ID; }); */  ///Creates a more interesting visual I think
+
+/* var context = svg3.node().getContext("2d");
+context.clearRect(0, 0, width, height);
+
+//Create a custom element, that will not be attached to the DOM, to which we can bind the data
+var detachedContainer = document.createElement("custom");
+var dataContainer = d3.select(detachedContainer);
+    
+d3.json('../../data/top3genres.json', function(error, dataset) {
+
+    //Create the circle packing as if it was a normal D3 thing
+    var dataBinding = dataContainer.selectAll(".node")
+        .data(pack.nodes(dataset))
+        .enter().append("circle")
+        .attr("class", function(d,i) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+        .attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; })
+        .attr("r", function(d) { return d.r; })
+        .attr("fill", function(d) { return d.children ? colorCircle(d.depth) : "white"; });
+
+
+//Select our dummy nodes and draw the data to canvas.
+dataBinding.each(function(d) { 
+    //Select one of the nodes/circles
+    var node = d3.select(this);
+
+    //Draw each circle
+    context.fillStyle = node.attr("fill");
+    context.beginPath();
+    context.arc(node.attr("cx"), node.attr("cy"), node.attr("r"), 0,  2 * Math.PI, true);
+    context.fill();
+    context.closePath();
+});	
+
+}); */
 /* let listeGenre = [];
 
 //let trackList = [];
@@ -146,7 +249,7 @@ for (let i = 0; i < 10; i++) {
         d.fy = null;
     } */
 
-    let TrapLatino = {
+    /* let TrapLatino = {
         parent : "Trap Latino",
         children : [{
             name: "DÁKITI",
@@ -307,7 +410,7 @@ let PopRap = {
             size: 10
         }
     ]
-    };
+    }; */
 
 // create circles for every parent 
    
@@ -355,8 +458,6 @@ let PopRap = {
 // A scale that gives a X target position for each group
 
 //create the svg element
-    let svg = d3.select("#top3genres")
-        .append("svg")
-        .attr("width", 50)
-
+    
+ 
  
