@@ -280,6 +280,12 @@ function update(data) {
         .attr("xlink:href", function (d) {
             return d.src;
         })
+        .attr("data-legend", function (d) {
+            return d.legend;
+        })
+        .attr("alt", function (d) {
+            return d.legend;
+        })
         .attr("x", function (d) {
             return x(d.group) + x.bandwidth() / 2 - 20;
         })
@@ -417,27 +423,18 @@ var tooltip = d3.select("#topChanson")
 svg2.selectAll("image")
     .on("mouseover", function (event) {
         d3.select(this)
-            .transition()
-            .duration(200)
-            .style("opacity", .9)
-        this.html(d.legend)
-        d3.select("#tooltip")
-            .style("left", (event.pageX) + "px")
-            .style("top", (event.pageY - 28) + "px")
-            .style("opacity", 1)
-            .text(d.legend)
-            .select(d.legend)
-            d3.select("#tooltip").classed("hidden", false)
+           .append("title")
+           .text(this.getAttribute("data-legend"))
 
     }
         )
-    .on("mouseout", function (d) {
+    .on("mouseout", function (event) {
         tooltip.transition()
             .duration(500)
             .style("opacity", 0)
             d3.select("#tooltip").classed("hidden", true)
     }
-        )
+        ) 
     
 /* 
 ///on hover, show the name of the artist
