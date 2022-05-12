@@ -34,7 +34,7 @@ d3.csv("https://raw.githubusercontent.com/neylaS/ProjetVisualDon/main/data/artis
     .selectAll("path")
     .data(data)
     .join("path")
-      .attr("fill", "#69b3a2")
+      .attr("fill", "#1DB954")
       .attr("d", d3.arc()     // imagine your doing a part of a donut plot
           .innerRadius(innerRadius)
           .outerRadius(d => y(d['Value']))

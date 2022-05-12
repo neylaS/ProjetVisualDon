@@ -270,7 +270,7 @@ function update(data) {
     .attr("height", function(d) {
       return height - y(d.value);
     })
-    .attr("fill", "#69b3a2")
+    .attr("fill", "#1DB954")
     .attr("opacity", 0.5)
 
 
