@@ -1,8 +1,7 @@
 {
-    "root": "genres",
     "children": [
      {
-      "parent": "Trap Latino",
+      "name": "Trap Latino",
       "children": [
          
            {"name": "DÁKITI", "ID": "1.1.2.1", "size":20},
