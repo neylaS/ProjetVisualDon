@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    
+
     <banner>
         <div class="w3-bar w3-black w3-hide-small">
             <a href="#" class="w3-bar-item w3-button"><i class="fa fa-GitHub"></i></a>
@@ -39,12 +39,16 @@
     <section id="wordCloud">
         <h2>Top 10 genres</h2>
         <div class="content">
+            <div class="description">
+            </div>
         </div>
     </section>
 
     <section id="top3genres">
         <h2>Top 3 chansons par genre</h2>
         <div class="content">
+            <div class="description">
+            </div>
         </div>
     </section>
 
@@ -52,11 +56,15 @@
         <h2>Top 5 Chanson par position</h2>
         <br>
         <div class="content">
-            <div class="buttonChanson">
-                <button id="button1">Janvier</button>
-                <button id="button2">Février</button>
-                <button id="button3">Mars</button>
-                <button id="button4">Avril</button>
+            <div class="graphChanson">
+                <div class="buttonChanson">
+                    <button id="button1">Janvier</button>
+                    <button id="button2">Février</button>
+                    <button id="button3">Mars</button>
+                    <button id="button4">Avril</button>
+                </div>
+            </div>
+            <div class="description">
             </div>
         </div>
         <br>
@@ -66,38 +74,44 @@
     <section id="artiste">
         <h2>Artistes plus écouté</h2>
         <div class="content">
+            <div class="description">
+            </div>
         </div>
     </section>
     <!--------------------------------------------- Popup artistes --------------------------------------------------------------->
 
-  <div id="abc">
-    <!-- Popup Div Starts Here -->
-    <div id="popupContact">
-      <div id="form" name="form">
-        <img id="close" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39219/preview.png" width="25" onclick="div_hide()">
-        <div class="row">
-          <div class="col-xs-6 col-lg-6">
-            <div class="profilePop">
-              <img alt="Anita Simmons" class="imgPopup" src="https://source.unsplash.com/BhcutpohYwg/800x800" width="150" />
+    <div id="abc">
+        <!-- Popup Div Starts Here -->
+        <div id="popupContact">
+            <div id="form" name="form">
+                <img id="close" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39219/preview.png" width="25"
+                    onclick="div_hide()">
+                <div class="row">
+                    <div class="col-xs-6 col-lg-6">
+                        <div class="profilePop">
+                            <img alt="Anita Simmons" class="imgPopup"
+                                src="https://source.unsplash.com/BhcutpohYwg/800x800" width="150" />
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-lg-6">
+                        <h2 class="namePopup">Nom Prénom</h2>
+                        <div class="legendPopup">Legend</div>
+                        <a class="lienSpotify" target="_blank" href="https://open.spotify.com/search/"><img
+                                alt="Spotify" class="spotify"
+                                src="https://cdn-icons-png.flaticon.com/512/174/174872.png" width="50" /></a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-xs-6 col-lg-6">
-            <h2 class="namePopup">Nom Prénom</h2>
-            <div class="legendPopup">Legend</div>
-            <a class="lienSpotify" target="_blank" href="https://open.spotify.com/search/"><img alt="Spotify" class="spotify" src="https://cdn-icons-png.flaticon.com/512/174/174872.png" width="50" /></a>
-          </div>
+            <!-- Popup Div Ends Here -->
         </div>
-      </div>
-      <!-- Popup Div Ends Here -->
     </div>
-  </div>
 
 </body>
 
 <script>
-  function div_hide() {
-    document.getElementById("abc").style.display = "none";
-  }
+    function div_hide() {
+        document.getElementById("abc").style.display = "none";
+    }
 </script>
 
 

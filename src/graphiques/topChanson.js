@@ -217,7 +217,7 @@ var margin = {
 
 
 // append the svg object to the body of the page
-let svg2 = d3.select("#topChanson .content .buttonChanson")
+let svg2 = d3.select("#topChanson .content .graphChanson")
   .append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
@@ -508,11 +508,17 @@ d3.select("#button1").on("click", function() {
 
 
 
-// description
-let des = d3.select("#topChanson .content")
+// Description
+
+let titleDes = d3.select("#topChanson .content .description")
+    .append("h3")
+    .attr("class", "description")
+    .text("Description");
+
+let des = d3.select("#topChanson .content .description")
   .append("p")
   .attr("class", "description")
-  .text("Description du graphique")
+  .text("Ce graphique nous montre le top 5 des artistes les plus écoutés et le titre. On peut l'écouter directement sur Spotify.")
 
 // add button to go to next section
 let button = d3.select("#topChanson")

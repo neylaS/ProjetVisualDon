@@ -79,11 +79,17 @@ function draw(words) {
 //get the 3 most streamed track of every genre from data set
 
 
-// description
-let des = d3.select("#wordCloud .content")
+// Description
+
+let titleDes = d3.select("#wordCloud .content .description")
+    .append("h3")
+    .attr("class", "description")
+    .text("Description");
+
+let desc = d3.select("#wordCloud .content .description")
     .append("p")
     .attr("class", "description")
-    .text("Description du graphique")
+    .text("Grâce à ce graphique WordCloud, nous pouvons facilement comparer l'importance de chaque genre côte à côte et voir comment la pop occupe la première place.")
 
 // add button to go to next section
 let button = d3.select("#wordCloud")
