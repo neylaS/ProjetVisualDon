@@ -524,7 +524,25 @@ let PopRap = {
         .sort(function (a, b) { return b.height - a.height || b.value - a.value; });
  */
 
-// A scale that gives a X target position for each group
+// Description
 
-//create the svg element
- 
+let titleDes = d3.select("#top3genres .content .description")
+    .append("h3")
+    .attr("class", "description")
+    .text("Description");
+
+let des = d3.select("#top3genres .content .description")
+    .append("p")
+    .attr("class", "description")
+    .text("Dans ce graphique, nous pouvons voir les chansons les plus streamées par genre. ")
+
+// add button to go to next section
+let button = d3.select("#top3genres")
+     .append("button")
+     .attr("id", "button")
+     .text("Next")
+     .on("click", function () {
+          //go to next section
+          window.location.href = "#topChanson";
+     }
+     );

@@ -58,11 +58,17 @@ d3.csv("https://raw.githubusercontent.com/neylaS/ProjetVisualDon/main/data/artis
 
 });
 
-// description
-let des = d3.select("#artiste .content")
+// Description
+
+let titleDes = d3.select("#artiste .content .description")
+    .append("h3")
+    .attr("class", "description")
+    .text("Description");
+
+let des = d3.select("#artiste .content .description")
     .append("p")
     .attr("class", "description")
-    .text("Description du graphique")
+    .text("Dans ce dernier diagramme circulaire, nous pouvons voir les artistes les plus récurrents et leurs concurrents.");
 
 // add button to go to next section
 let button = d3.select("#artiste")
@@ -74,4 +80,3 @@ let button = d3.select("#artiste")
           window.location.href = "#wordCloud";
      }
      );
-
