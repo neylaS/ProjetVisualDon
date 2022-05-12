@@ -1,13 +1,11 @@
 /* /* /* Top 3 chansons par genre (Circle Packing) */
-
 import * as d3 from 'd3';
 /* import data from '../../data/data-20.csv'; */
 import data from '../../data/top3genres.json';
 
 
-
-
-
+  
+      
 
  /* //get the list of 10 most recurent genre in data set
  let genres = data.map(d => d.Genre.replace("[", "").replace("]", "").replaceAll("'","").trim().split(","));
@@ -29,31 +27,6 @@ console.log(results) */
 
 
 
-//Create the canvas and context
-/* let svg3 = d3.select("#top3genres")
-.append("svg")
-.attr("width", 400)
-.attr("height", 400)
-
-
-var packLayout = d3.pack()
-.size([300, 300]);
-
-//get the element root from data
-let root = d3.hierarchy(data)
-.sum(d => d.root)
-.sort((a, b) => b.root - a.root);
-console.log(root)
-
-//get the children of the root
-let nodes = packLayout(root).children;
-console.log(nodes)
-
-//Pour les 10 objets du nodes, créer un nouveau cercle 
-svg3.selectAll("circle")
-.data(nodes)
-.enter()
-.append("circle") */
 
 
 

@@ -26,7 +26,7 @@ var myWords = [{ word: "Australian Hip Hop", size: "25" }, { word: "Pop Rap", si
 
 // set the dimensions and margins of the graph
 const margin = {
-     top: 10,
+     top: 0,
      right: 10,
      bottom: 10,
      left: 10
@@ -36,14 +36,14 @@ const margin = {
 
 //create graph with d3 to show 10 most genre music from data set 
 //create svg element
-let svg = d3.select("#wordCloud")
+let svg = d3.select("#wordCloud .content")
      .append("svg")
      .attr("width", "100%")
      .attr("height", "100%")
      .attr("viewBox", "0 0 600 600")
      .attr("preserveAspectRatio", "xMidYMid meet")
      .append("g")
-     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+     //.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
 // Wordcloud features that are different from one word to the other must be here
@@ -78,3 +78,20 @@ function draw(words) {
 
 //get the 3 most streamed track of every genre from data set
 
+
+// description
+let des = d3.select("#wordCloud .content")
+    .append("p")
+    .attr("class", "description")
+    .text("Description du graphique")
+
+// add button to go to next section
+let button = d3.select("#wordCloud")
+     .append("button")
+     .attr("id", "button")
+     .text("Next")
+     .on("click", function () {
+          //go to next section
+          window.location.href = "#top3genres";
+     }
+     );

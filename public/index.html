@@ -15,7 +15,7 @@
 
     <title>Tendances Spotify</title>
 
-    
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
@@ -26,36 +26,80 @@
 </head>
 
 <body>
+    
+    <banner>
+        <div class="w3-bar w3-black w3-hide-small">
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-GitHub"></i></a>
+        </div>
+        <header class="w3-container w3-center w3-white">
+            <h1 class="w3-xxxlarge"><b>TENDANCES SPOTIFY 2021</b></h1>
+        </header>
+    </banner>
 
-    <div class="w3-bar w3-black w3-hide-small">
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-GitHub"></i></a>
-    </div>
-    <header class="w3-container w3-center w3-padding-48 w3-white">
-        <h1 class="w3-xxxlarge"><b>TENDANCES SPOTIFY 2021</b></h1>
-    </header>
-
-    <section id="wordCloud" class="w3-container w3-center w3-padding-64 w3-white">
-        <h2>Word Cloud</h2>
+    <section id="wordCloud">
+        <h2>Top 10 genres</h2>
+        <div class="content">
+        </div>
     </section>
 
-    <section id="top3genres" class="w3-container w3-center w3-padding-64 w3-white">
+    <section id="top3genres">
         <h2>Top 3 chansons par genre</h2>
+        <div class="content">
+        </div>
     </section>
 
-    <section id="topChanson" class="w3-container w3-center w3-padding-64 w3-white">
-        <h2>Top 5 Chanson par position par mois</h2>
+    <section id="topChanson">
+        <h2>Top 5 Chanson par position</h2>
+        <br>
+        <div class="content">
+        <div class="buttonChanson">
         <button id="button1">Janvier</button>
         <button id="button2">Février</button>
         <button id="button3">Mars</button>
         <button id="button4">Avril</button>
+        </div>
+        </div>
         <br>
         <br>
     </section>
 
-    <section id="artiste" class="w3-container w3-center w3-padding-64 w3-white">
+    <section id="artiste">
         <h2>Artistes plus écouté</h2>
-        <a class="scrollNext" href="#wordCloud">Top</a>
+        <div class="content">
+        </div>
     </section>
+    <!--------------------------------------------- Popup artistes --------------------------------------------------------------->
+
+  <div id="abc">
+    <!-- Popup Div Starts Here -->
+    <div id="popupContact">
+      <div id="form" name="form">
+        <img id="close" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39219/preview.png" width="25" onclick="div_hide()">
+        <div class="row">
+          <div class="col-xs-6 col-lg-6">
+            <div class="profilePop">
+              <img alt="Anita Simmons" class="imgPopup" src="https://source.unsplash.com/BhcutpohYwg/800x800" width="150" />
+            </div>
+          </div>
+          <div class="col-xs-6 col-lg-6">
+            <h2 class="namePopup">Nom Prénom</h2>
+            <div class="legendPopup">Legend</div>
+            <a class="lienSpotify" target="_blank" href="https://open.spotify.com/search/"><img alt="Spotify" class="spotify" src="https://cdn-icons-png.flaticon.com/512/174/174872.png" width="50" /></a>
+          </div>
+        </div>
+      </div>
+      <!-- Popup Div Ends Here -->
+    </div>
+  </div>
+
+</body>
+
+<script>
+  function div_hide() {
+    document.getElementById("abc").style.display = "none";
+  }
+</script>
+
 
 </body>
 

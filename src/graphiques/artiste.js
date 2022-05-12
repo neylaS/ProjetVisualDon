@@ -57,3 +57,21 @@ d3.csv("https://raw.githubusercontent.com/neylaS/ProjetVisualDon/main/data/artis
         .attr("alignment-baseline", "middle")
 
 });
+
+// description
+let des = d3.select("#artiste .content")
+    .append("p")
+    .attr("class", "description")
+    .text("Description du graphique")
+
+// add button to go to next section
+let button = d3.select("#artiste")
+     .append("button")
+     .attr("id", "button")
+     .text("Top")
+     .on("click", function () {
+          //go to next section
+          window.location.href = "#wordCloud";
+     }
+     );
+
