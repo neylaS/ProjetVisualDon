@@ -88,6 +88,10 @@ div .buttonChanson {
     scroll-snap-align: center;
 }
 
+footer {
+    
+    background: #000;
+    color: #fff;}
 /*------------------------------- POPUP ---------------------------------------------*/
 #abc {
     width: 100%;
