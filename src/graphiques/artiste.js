@@ -4,7 +4,7 @@ import dataArtiste from '../../data/artiste.csv';
 
 
 // set the dimensions and margins of the graph
-const margin = {top: 100, right: 0, bottom: 0, left: 0},
+const margin = {top: 80, right: 0, bottom: 0, left: 0},
     width = 460 - margin.left - margin.right,
     height = 460 - margin.top - margin.bottom,
     innerRadius = 80,
