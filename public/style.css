@@ -1,7 +1,18 @@
 h1,
-h2,
+h2{
+
+     font: "Gotham", sans-serif, bold;
+        border-bottom: 2px solid #000;
+      }
+      h2:first-line{
+        background:#000;
+        color:#fff;
+      }
+
 h3,
-h4,
+h4{
+    font-weight: bold;
+}
 h5,
 h6 {
     font-family: "Gotham", sans-serif, bold
@@ -48,6 +59,16 @@ section .content {
     flex-direction: column;
     /* justify-content: flex-start; */
     text-align: center;
+    color: #000;
+    
+    
+    /*justify the text*/
+    
+}
+button{
+    background: none;
+    color: #000;
+    border-radius: 30px;
 }
 
 div .buttonChanson {
@@ -55,6 +76,7 @@ div .buttonChanson {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    
 }
 
 .scrollNext {

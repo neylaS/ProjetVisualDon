@@ -57,6 +57,7 @@ d3.csv("https://raw.githubusercontent.com/neylaS/ProjetVisualDon/main/data/artis
         .attr("alignment-baseline", "middle")
 
 });
+//on click on the name of the artiste, open popup with the artiste's picture and his/her biography
 
 // Description
 
@@ -80,3 +81,4 @@ let button = d3.select("#artiste")
           window.location.href = "#wordCloud";
      }
      );
+
