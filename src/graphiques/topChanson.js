@@ -270,8 +270,8 @@ function update(data) {
     .attr("height", function(d) {
       return height - y(d.value);
     })
-    .attr("fill", "#69b3a2")
-    .attr("opacity", 0.5)
+    .attr("fill", "#1DB954")
+    .attr("opacity", 1)
 
 
   //append an image to the circles
@@ -518,7 +518,8 @@ let titleDes = d3.select("#topChanson .content .description")
 let des = d3.select("#topChanson .content .description")
   .append("p")
   .attr("class", "description")
-  .text("Ce graphique nous montre le top 5 des artistes les plus écoutés et le titre. On peut l'écouter directement sur Spotify.")
+  .text("Parmi toutes les musiques recensées sur Spotify,les chansons les plus populaires sont déterminée au nombre d'écoute.Afin d'explorer ces chansons, nous avons créé un graphique qui permet de visualiser le Top 5 sur 4 mois. Pour avoir plus d'informations sur les chansons, cliquez sur les images.");
+  
 
 // add button to go to next section
 let button = d3.select("#topChanson")

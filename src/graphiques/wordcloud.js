@@ -66,7 +66,7 @@ function draw(words) {
           .data(words)
           .enter().append("text")
           .style("font-size", function (d) { return d.size; })
-          .style("fill", "#69b3a2")
+          .style("fill", "#1DB954")
           .attr("text-anchor", "middle")
           .style("font-family", "Impact")
           .attr("transform", function (d) {
@@ -89,7 +89,7 @@ let titleDes = d3.select("#wordCloud .content .description")
 let desc = d3.select("#wordCloud .content .description")
     .append("p")
     .attr("class", "description")
-    .text("Grâce à ce graphique WordCloud, nous pouvons facilement comparer l'importance de chaque genre côte à côte et voir comment la pop occupe la première place.")
+    .text("On recense un nombre interminable de genres musicaux, et la liste ne s'arrête pas de grandir. Mais parmi tous les genres existant, on peut parfois se sentir un peu perdu. C'est pourquoi, il était important selon nous, d'explorer cette liste, pour retrouver les 10 genres musicaux les plus récurrents de 2021. Grâce à ce graphique de type WordCloud, nous pouvons facilement comparer l'importance de chaque genre côte à côte. On remarque donc que la pop occupe la première place.")
 
 // add button to go to next section
 let button = d3.select("#wordCloud")

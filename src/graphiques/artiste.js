@@ -34,7 +34,7 @@ d3.csv("https://raw.githubusercontent.com/neylaS/ProjetVisualDon/main/data/artis
     .selectAll("path")
     .data(data)
     .join("path")
-      .attr("fill", "#69b3a2")
+      .attr("fill", "#1DB954")
       .attr("d", d3.arc()     // imagine your doing a part of a donut plot
           .innerRadius(innerRadius)
           .outerRadius(d => y(d['Value']))
@@ -68,7 +68,7 @@ let titleDes = d3.select("#artiste .content .description")
 let des = d3.select("#artiste .content .description")
     .append("p")
     .attr("class", "description")
-    .text("Dans ce dernier diagramme circulaire, nous pouvons voir les artistes les plus récurrents et leurs concurrents.");
+    .text("Finalement, après avoir exploré les genres musicaux, ainsi que les chansons, la dernière thématique à aborder est celle des artistes. Dans ce dernier graphique, on peut donc découvrir les artistes les plus populaires de 2021.");
 
 // add button to go to next section
 let button = d3.select("#artiste")
