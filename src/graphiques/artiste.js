@@ -5,8 +5,8 @@ import dataArtiste from '../../data/artiste.csv';
 
 // set the dimensions and margins of the graph
 const margin = {top: 80, right: 0, bottom: 0, left: 0},
-    width = 460 - margin.left - margin.right,
-    height = 460 - margin.top - margin.bottom,
+    width = 600 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom,
     innerRadius = 80,
     outerRadius = Math.min(width, height) / 2;   // the outerRadius goes from the middle of the SVG area to the border
 

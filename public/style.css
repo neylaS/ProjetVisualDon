@@ -58,7 +58,8 @@ section .content {
     display: flex;
     flex-direction: column;
     /* justify-content: flex-start; */
-    text-align: center;
+    text-align: justify;
+  text-justify: inter-word;
     color: #000;
     
     

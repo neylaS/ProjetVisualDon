@@ -5,49 +5,7 @@ import {
 } from 'd3-selection';
 
 
-// show the 5 first tracks at the position 0,1 and 2 for the date : 01.01.21
-let tracksByDay = data.filter(d => d.Date === "01.01.21");
-//console log the name of the tracks at index 0,1 and 2
-console.log(tracksByDay[0])
-console.log(tracksByDay[1])
-console.log(tracksByDay[2])
-console.log(tracksByDay[3])
-console.log(tracksByDay[4])
-
-
-// show the 5 first tracks at the position 0,1 and 2 for the date : 01.02.21
-let tracksByDay2 = data.filter(d => d.Date === "01.02.21");
-//console log the name of the tracks at index 0,1 and 2
-console.log(tracksByDay2[0])
-console.log(tracksByDay2[1])
-console.log(tracksByDay2[2])
-console.log(tracksByDay2[3])
-console.log(tracksByDay2[4])
-
-// show the 5 first tracks at the position 0,1 and 2 for the date : 01.03.21
-let tracksByDay3 = data.filter(d => d.Date === "01.03.21");
-//console log the name of the tracks at index 0,1 and 2
-console.log(tracksByDay3[0])
-console.log(tracksByDay3[1])
-console.log(tracksByDay3[2])
-console.log(tracksByDay3[3])
-console.log(tracksByDay3[4])
-
-// show the 5 first tracks at the position 0,1 and 2 for the date : 01.04.21
-let tracksByDay4 = data.filter(d => d.Date === "01.04.21");
-//console log the name of the tracks at index 0,1 and 2
-console.log(tracksByDay4[0])
-console.log(tracksByDay4[1])
-console.log(tracksByDay4[2])
-console.log(tracksByDay4[3])
-console.log(tracksByDay4[4])
-
-
-
-
-
 // create 4 data_set
-
 
 var data1 = [
 
@@ -245,10 +203,6 @@ svg2.append("g")
   .call(d3.axisLeft(y));
 
 
-
-
-
-
 // A function that create / update the plot for a given variable:
 function update(data) {
 
@@ -297,8 +251,6 @@ function update(data) {
     .attr("width", 40)
     .attr("height", 40)
     .attr("opacity", 1)
-
-
 
 
   //on click the image, show the d.legend
@@ -367,9 +319,6 @@ d3.select("#button2").on("click", function() {
     })
 
 })
-
-
-
 
 
 
@@ -530,3 +479,44 @@ let button = d3.select("#topChanson")
     //go to next section
     window.location.href = "#artiste";
   });
+
+
+
+
+//code pour obtenir les top5
+/* // show the 5 first tracks at the position 0,1 and 2 for the date : 01.01.21
+let tracksByDay = data.filter(d => d.Date === "01.01.21");
+//console log the name of the tracks at index 0,1 and 2
+console.log(tracksByDay[0])
+console.log(tracksByDay[1])
+console.log(tracksByDay[2])
+console.log(tracksByDay[3])
+console.log(tracksByDay[4])
+
+
+// show the 5 first tracks at the position 0,1 and 2 for the date : 01.02.21
+let tracksByDay2 = data.filter(d => d.Date === "01.02.21");
+//console log the name of the tracks at index 0,1 and 2
+console.log(tracksByDay2[0])
+console.log(tracksByDay2[1])
+console.log(tracksByDay2[2])
+console.log(tracksByDay2[3])
+console.log(tracksByDay2[4])
+
+// show the 5 first tracks at the position 0,1 and 2 for the date : 01.03.21
+let tracksByDay3 = data.filter(d => d.Date === "01.03.21");
+//console log the name of the tracks at index 0,1 and 2
+console.log(tracksByDay3[0])
+console.log(tracksByDay3[1])
+console.log(tracksByDay3[2])
+console.log(tracksByDay3[3])
+console.log(tracksByDay3[4])
+
+// show the 5 first tracks at the position 0,1 and 2 for the date : 01.04.21
+let tracksByDay4 = data.filter(d => d.Date === "01.04.21");
+//console log the name of the tracks at index 0,1 and 2
+console.log(tracksByDay4[0])
+console.log(tracksByDay4[1])
+console.log(tracksByDay4[2])
+console.log(tracksByDay4[3])
+console.log(tracksByDay4[4]) */
