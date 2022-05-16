@@ -18,7 +18,7 @@ for (const tabGenre of genres) {
 }
 
 results.sort((a, b) => b.iteration - a.iteration);
-console.log(results)
+//console.log(results)
 
 // List of words
 // var myWords = [{word: "Australian Hip Hop", size: "30"}, {word: "Pop Rap", size: "35"}, {word: "Canadian Comtemporary R&B", size: "40"}, {word: "Trap Latino", size: "45"}, {word: "Latin", size: "50"}, {word: "Reggaeton", size: "55"},{word: "Post-Teen-Pop", size: "50"},{word: "Canadian Pop", size: "65"},{word: "Dance Pop", size: "75"},{word: "Pop", size: "100"} ]
